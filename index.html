@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=form, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>Input Output - ES6 Calculater</h1>
+
+      <form onsubmit="doSum(event)">
+        First Number : <input id="firstNum" type="number" required step="0.1" />
+        <br />
+        Second Number :
+        <input id="secondNum" type="number" required step="0.1" />
+        <br />
+        <button>Sum</button>
+        <button>Subtract</button>
+      </form>
+      <h1 id="sumWindow"></h1>
+      <h1 id="subtractWindow"></h1>
+      <h1 id="multiplyWindow"></h1>
+      <h1 id="divisionWindow"></h1>
+      <script>
+        console.log("hellow world");
+        function doSum(event) {
+          event.preventDefault();
+          let firstNumber = document.querySelector("#firstNum").value;
+          let secondNumber = document.querySelector("#secondNum").value;
+
+          console.log(firstNumber);
+          console.log(secondNumber);
+
+          let resultsum = Number(firstNumber) + Number(secondNumber);
+          let resultsubtract = Number(firstNumber) - Number(secondNumber);
+          let resultmultiply = Number(firstNumber) * Number(secondNumber);
+          let resultdivision = Number(firstNumber) / Number(secondNumber);
+
+          let messagesum = `the sum of ${firstNumber} and ${secondNumber} is ${resultsum}`;
+          let messagesubtract = `the subtract of ${firstNumber} and ${secondNumber} is ${resultsubtract}`;
+          let messagemultiply = `the multiply of ${firstNumber} and ${secondNumber} is ${resultmultiply}`;
+          let messagedivision = `the division of ${firstNumber} and ${secondNumber} is ${resultdivision}`;
+
+          document.querySelector("#sumWindow").innerHTML = messagesum;
+          document.querySelector("#subtractWindow").innerHTML = messagesubtract;
+          document.querySelector("#multiplyWindow").innerHTML = messagemultiply;
+          document.querySelector("#divisionWindow").innerHTML = messagedivision;
+        }
+      </script>
+    </div>
+  </body>
 </html>

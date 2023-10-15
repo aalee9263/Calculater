@@ -1,0 +1,7 @@
+.main {
+    box-sizing: border-box;
+    border: 1 px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
