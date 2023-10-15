@@ -1,7 +1,15 @@
 .main {
     box-sizing: border-box;
     border: 1 px solid black;
-    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-color: aqua;
+    width: 600px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+#firstNum {
+    align-items: start;
 }
